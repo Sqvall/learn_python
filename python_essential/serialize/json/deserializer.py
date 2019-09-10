@@ -1,5 +1,5 @@
 import json
-from python_advanced.serialize.json.serializer import User
+from python_essential.serialize.json.serializer import User
 
 
 with open('serialize.json') as f:
