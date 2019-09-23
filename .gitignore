@@ -219,3 +219,5 @@ my_utility/parse
 my_utility/parsed_images/*
 my_utility/parsed_images/
 my_utility/parsed_images
+
+.mypy_cache/

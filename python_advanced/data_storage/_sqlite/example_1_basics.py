@@ -39,7 +39,7 @@ print(sql_text)
 sql_text = 'SELECT * FROM "users" WHERE id = %s' % (10,)
 print(sql_text)
 sql_text2 = 'SELECT * FROM "users" WHERE id = %s' % ('0 or id like "%"',)
-print(sql_text)
+print(sql_text2)
 
 cursor.execute('SELECT * FROM "users" WHERE id = ?', (10,))
 cursor.execute('SELECT * FROM "users" WHERE id = :id', {'id': 10})

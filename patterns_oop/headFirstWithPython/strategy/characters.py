@@ -43,8 +43,8 @@ class Dagger(WeaponBehavior):
 
 war = Warrior()
 war.display()
-war.weapon.use_weapon()
+war.use_weapon()
 
 war.set_weapon(Dagger())
-war.weapon.use_weapon()
+war.use_weapon()
 
