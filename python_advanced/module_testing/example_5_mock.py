@@ -31,23 +31,23 @@ class User:
 
 class UserTestCase(unittest.TestCase):
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_sum_two_values_uncalled(self, mocked_sum):
         self.assertFalse(mocked_sum.called)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_sum_two_values_called(self, mocked_sum):
         sum_two_values(10, 20)
         self.assertTrue(mocked_sum.called)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_sum_two_values_called_with(self, mocked_sum):
         sum_two_values(10, 20)
         self.assertTrue(mocked_sum.called)
         self.assertEqual(mocked_sum.call_count, 1)
         mocked_sum.assert_called_with(10, 20)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_reset_mock(self, mocked_sum):
         sum_two_values(10, 20)
         sum_two_values(10, 20)
@@ -62,14 +62,14 @@ class UserTestCase(unittest.TestCase):
         self.assertFalse(mocked_sum.called)
         mocked_sum.assert_not_called()
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_mock_call(self, mocked_sum):
         sum_two_values(10, 40)
         sum_two_values(20, 50)
         sum_two_values(30, 60)
         mocked_sum.assert_any_call(10, 40)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_mock_call_with(self, mocked_sum):
         sum_two_values(10, 40)
         mocked_sum.assert_called_with(10, 40)
@@ -80,7 +80,7 @@ class UserTestCase(unittest.TestCase):
         sum_two_values(30, 60)
         mocked_sum.assert_any_call(30, 60)
 
-    @unittest.mock.patch('example5_mock.sum_two_values', return_value=20)
+    @unittest.mock.patch('example_5_mock.sum_two_values', return_value=20)
     def test_mock_return_value_in_dec(self, mocked_sum):
         result1 = sum_two_values(10, 40)
         result2 = sum_two_values(110, 140)
@@ -89,7 +89,7 @@ class UserTestCase(unittest.TestCase):
         self.assertEqual(result2, 20)
         self.assertEqual(result3, 20)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_mock_return_value_in_body(self, mocked_sum):
         mocked_sum.return_value = 20
 
@@ -100,7 +100,7 @@ class UserTestCase(unittest.TestCase):
         self.assertEqual(result2, 20)
         self.assertEqual(result3, 20)
 
-    @unittest.mock.patch('example5_mock.sum_two_values')
+    @unittest.mock.patch('example_5_mock.sum_two_values')
     def test_mock_side_effect(self, mocked_sum):
         result = 0
 
@@ -136,7 +136,7 @@ class UserTestCase(unittest.TestCase):
         self.assertEqual(sum_two_values(1, 2), 300)
 
     def test_mock_return_value_in_body_with(self):
-        with unittest.mock.patch('example5_mock.sum_two_values') as mocked_sum:
+        with unittest.mock.patch('example_5_mock.sum_two_values') as mocked_sum:
             mocked_sum.return_value = 20
             result1 = sum_two_values(10, 40)
             result2 = sum_two_values(110, 140)
