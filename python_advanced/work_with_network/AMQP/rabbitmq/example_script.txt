@@ -1,0 +1,14 @@
+$ sudo rabbitmqctl list_queues
+Listing queues ...
+hello    0
+...done.
+
+(для Windows ‒ без sudo)
+
+[в нашей компании используют более удобный скрипт мониторинга:]
+
+watch 'sudo /usr/sbin/rabbitmqctl list_queues name messages_unacknowledged messages_ready messages durable auto_delete consumers | grep -v "\.\.\." | sort | column -t;'
+
+[скрипт выводит и обновляет каждые 2 секунды таблицу со списком очередей: имя очереди; количество сообщений в обработке;
+количество сообщений готовых к обработке; общее количество сообщений; устойчивость очереди к перезагрузке сервиса;
+является ли временной очередью; количество подписчиков]
