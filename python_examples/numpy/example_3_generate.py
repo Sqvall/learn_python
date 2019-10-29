@@ -12,11 +12,12 @@ print(value3)
 value4 = numpy.linspace(1, 5, 20)
 print(value4)
 
-value7 = numpy.linspace(1, 5, 9, dtype=numpy.int8)
+value5 = numpy.linspace(1, 5, 9, dtype=numpy.int8)
+print(value5)
+
+value6 = numpy.random.randint(1, 100, 10)
+print(value6)
+
+value7 = numpy.random.rand(3, 4)
 print(value7)
 
-value8 = numpy.random.random_integers(1, 100, 10)
-print(value8)
-
-value9 = numpy.random.rand(3, 4)
-print(value9)
