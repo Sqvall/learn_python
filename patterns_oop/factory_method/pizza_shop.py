@@ -8,7 +8,7 @@ class Pizza(ABC):
     topping: list
 
     def prepare(self):
-        print("Preparing " + self.name)
+        print(f"Preparing {self.name}")
         print("Tossing dough...")
         print("Adding sauce...")
         print("Adding toppings: ")
