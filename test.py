@@ -1,5 +1,7 @@
-my_list = [1, 2, 3, 4, 5]
-my_list2 = ['a', 'b', 'c', 'd', 'q']
+ak = None
+osd = 90
+fpd = 100
+ss = 10
+ak = (fpd-ss) * (1 - osd / fpd)
 
-for val in zip(my_list, my_list2):
-    print(val)
+print(ak)

@@ -221,3 +221,5 @@ my_utility/parsed_images/
 my_utility/parsed_images
 
 .mypy_cache/
+/python_examples/async/_asynchttp/output_sync/*
+/python_examples/async/_asynchttp/output_async/*

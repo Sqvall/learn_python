@@ -32,7 +32,7 @@ class Pizza(ABC):
 
 
 class PizzaStore(ABC):
-    menu = {}
+    menu: dict
 
     def order_pizza(self, pizza_type: str):
         pizza = self.create_pizza(pizza_type)
