@@ -1,9 +1,6 @@
 from abc import ABC
 
 
-# NOT COMPLETE!
-
-
 class Observer(ABC):
     def update(self, temp, humidity, pressure):
         pass
