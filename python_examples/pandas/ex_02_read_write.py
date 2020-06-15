@@ -6,7 +6,7 @@ fpo = Path('output/titanic.xlsx')
 
 df = pd.read_csv(fpi)
 
-df.to_excel(fpo, sheet_name='passengers', index=False, engine='xlsxwriter')
+df.to_excel(fpo, sheet_name='passengers', engine='xlsxwriter')
 
 # print(df.head(8))
 # print(df.tail(5))
